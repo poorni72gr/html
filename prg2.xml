@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://pro.gcu.org/2024/XMLSchema">
+
+   
+  <xs:element name="Names">
+    <xs:complexType>
+      <xs:sequence>
+        
+        <xs:element name="person" type="xs:string"/>
+
+         
+        <xs:element name="Names">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="first name" type="xs:string"/>
+              <xs:element name="middle name" type="xs:string"/>
+              <xs:element name="last name" type="xs:string" maxOccurs="2"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+         
+        <xs:element name="item" minOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="person id" type="xs:int"/>
+              <xs:element name="person name" type="xs:string" maxOccurs="2"/>
+              <xs:element name="person depmt" type="xs:string"/>
+              <xs:element name="person fees" type="xs:decimal"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+     <xs:element name="course" minOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="java" type="xs:int"/>
+              <xs:element name="python" type="xs:string" maxOccurs="2"/>
+              <xs:element name="RM" type="xs:string"/>
+              <xs:element name="AI" type="xs:decimal"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+
+
+      
+      <xs:attribute name="person" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
