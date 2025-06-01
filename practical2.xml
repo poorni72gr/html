@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns:xsi="http://www.w3.org/2007/xmlSchema">
+<book>
+<title>java</title>
+<author>murugan</author>
+<year>2002</year>
+</book>
+<book>
+<title>python</title>
+<author>gugulan</author>
+<year>2003</year>
+</book>
+<xs:schema xmlns:xs="http://www.w3.org/2007/xmlSchema">
+<xs:element name="library">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="book" max="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="title" type="xs:String"/>
+<xs:element name="author" type="xs:String"/>
+<xs:element name="year" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>
+</library>
