@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<college xmlns:xsi="http://pro.gcu.org/2001/XMLSchema">
+    <course>
+        <courseName>java</courseName>
+        <courseCode>java101</courseCode>
+        <credits>4</credits>
+    </course>
+    <course>
+        <courseName>web development</courseName>
+        <courseCode>wd101</courseCode>
+        <credits>3</credits>
+    </course>
+    <course>
+        <courseName> advance dbms</courseName>
+        <courseCode>dbms101</courseCode>
+        <credits>4</credits>
+    </course>
+    <course>
+        <courseName>AI</courseName>
+        <courseCode>AI101</courseCode>
+        <credits>3</credits>
+    </course>
+    <course>
+        <courseName>RM</courseName>
+        <courseCode>RM101</courseCode>
+        <credits>2</credits>
+    </course>
+    <course>
+        <courseName>PYTHON</courseName>
+        <courseCode>PYTHON101</courseCode>
+        <credits>4</credits>
+    </course>
+
+
+
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <xs:element name="college">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="course" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="courseName" type="xs:string"/>
+                                <xs:element name="courseCode" type="xs:string"/>
+                                <xs:element name="credits" type="xs:int"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:schema>
+</college>
